@@ -1,7 +1,7 @@
 <template>
 	<section class="slider">
 		<div class="slider__wrapper">
-			<img src="http://placehold.it/1190x500" alt="">
+			<img src="https://scontent.fmnl4-3.fna.fbcdn.net/v/t31.0-8/14257727_530042183848095_8976476999735116597_o.jpg?oh=2e429bdc4d771667ed1fd8a5299413ad&oe=59AAA93A" alt="">
 		</div>
 	</section>
 </template>
