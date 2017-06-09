@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+*.2077688314
+*.babelrc
+*.3861951423
+npm-debug.log.306759573
+*.JPG
+static/img/logo.png
+*.psd
+src/npm-debug.log.1899138779
+*.md
+package.json

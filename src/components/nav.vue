@@ -43,8 +43,9 @@ export default {
 <style scoped lang="sass">
 $yellow: #CDB649
 .navbar
+  background: #f7f7f7
   &__wrapper
-    padding: 0 10em
+    padding: 0 10rem
     width: 100%
     height: 75px
     display: flex
