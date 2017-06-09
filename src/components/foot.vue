@@ -6,7 +6,7 @@
         <div class="footer__socialApp">
        <div class="footer__title">ADDRESS</div>
         <p style="text-align:"> 5 Bingo Street. <br>
-        Brgy. Seinna Sta. Mesa heights <br>  
+        Brgy. Seinna Sta. Mesa Heights <br>  
         Quezon City
         </p>
     </div>
