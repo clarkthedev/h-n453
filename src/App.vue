@@ -1,6 +1,7 @@
 <template>
   <div id="app">
       <navbar> </navbar>
+
       <router-view> </router-view>
       <foot> </foot>    
   </div>
@@ -9,8 +10,6 @@
 <script>
 import navbar from './components/nav.vue'
 import foot from './components/foot.vue'
-
-
 
 export default {
   name: 'app',
@@ -22,8 +21,15 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted(){
+      var controller = new ScrollMagic.Controller();
+      var scene = new ScrollMagic.Scene({triggerElement: ".aboutUs__details"})
+            .setPin(".navbar__wrapper")
+            .addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
+            .addTo(controller);
   }
-} 
+  }
 </script>
 
 <style lang="sass">
@@ -63,6 +69,8 @@ export default {
 			font-family: "Julius sans", serif
 .t-center
 	text-align: center
+.pa
+  position: absolute
 .pr
   position: relative
 .wrapper

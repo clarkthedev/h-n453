@@ -18,7 +18,7 @@
                   Chinese and japanese restaurant already have strong footholds in the filipino,
                   Singaporean dishes still remain largely unknown. However, the creation of
                   Hainanese delights seeks to change that.
-                  <a href="" class="link">Read more abous us.</a>
+                   <router-link to="/about" class="link">Read more about us.</router-link>
                 </p>
               </div>
             </div>

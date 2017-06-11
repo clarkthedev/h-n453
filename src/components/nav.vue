@@ -8,7 +8,7 @@
         <li class="navbar__item" v-for="item in items"> 
             <router-link :to="item.link">{{item.text}}</router-link>
         </li>
-        <li class="navbar__item"> <a class="navbar__link" href="#">Our Menu </a> </li>
+        <li class="navbar__item"> <router-link to="/menu" class="navbar__link"> Our Menu</router-link> </li>
       </ul>
     </div>
 
@@ -44,6 +44,16 @@ export default {
 $yellow: #CDB649
 .navbar
   background: #f7f7f7
+  a
+    text-decoration: none
+    &:not(.navbar__link)
+      padding: .5em
+      color: #777
+      transition: 100ms
+      &:hover
+        color: #CDB649
+        padding-bottom: 1em
+        
   &__wrapper
     padding: 0 10rem
     width: 100%

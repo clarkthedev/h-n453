@@ -5,11 +5,10 @@
 				<strong class="title__bold">OUR BRANCHES</strong>
 			</div>
 			<div class="branches__container">
-				<div class="branches__data" v-for="n in 12">
-					<div class="branches__store">
-					
+				<div class="branches__data" v-for="branch in branches">
+					<div class="branches__store"> 
 						<div class="branches__result"> 
-							<div class="result__mall"> ROBINSONS PLACE MANILA </div>
+							<div class="result__mall"> {{branch.location}} </div>
 							<div class="result__floor"> 4/F, Robinsons Place Manila </div>
 							<div> Midtown Wing, Pedro Gil cor. </div>
 							<div> Adriatico Street, Ermita  </div>
@@ -22,8 +21,28 @@
 </template>
 
 <script>
+import Firebase from 'firebase'
+
+let config = {
+    apiKey: "AIzaSyDr_FxFCkvHvoOhN6O-pXRbhlKPu0BDWMQ",
+    authDomain: "hainanese-delights.firebaseapp.com",
+    databaseURL: "https://hainanese-delights.firebaseio.com",
+    projectId: "hainanese-delights",
+    storageBucket: "hainanese-delights.appspot.com",
+    messagingSenderId: "102778988316"
+}
+let app = Firebase.initializeApp(config)
+let db = app.database();
+let branchRef = db.ref('branches')
+
+
+
 export default {
+
   name: 'branches',
+   firebase: {
+    branches: branchRef
+  },
   data () {
     return {
      
