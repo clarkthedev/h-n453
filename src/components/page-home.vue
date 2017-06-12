@@ -65,7 +65,7 @@
 	    </p>
 	    <div class="menu__btnWrapper">
 	    	<router-link to="/menu" > 
-       <button class="z-depth-1"> VIEW FULL MENU </button>
+       <button @click="gotop" class="z-depth-1"> VIEW FULL MENU </button>
         </router-link> 
 	    </div>
     	</div>
@@ -82,6 +82,11 @@
 					components:{
 						branches,
 						slider
-					}
+					},
+          methods:{
+            gotop(){
+              $(window).scrollTop(0);
+            }
+          }
 				}
       </script>

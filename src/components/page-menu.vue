@@ -15,7 +15,7 @@
 				<div class="menuList__item" v-for="n in 9">
 					<div class="menuList__color pr">
 						<div class="menuList__img">
-							<img class="menuList__path" v-lazy="'./static/img/menu/_MG_0570.JPG'">
+							<img class="menuList__path" v-lazy="'static/img/menu/_MG_0570.JPG'">
 							<div v-lazy:background-image="imgObj"></div>
 						</div>
 						<div class="menuList__details pr">
@@ -35,7 +35,7 @@
 		data(){
 			return{
 				 imgObj: {
-	        src: './static/img/menu/_MG_0570.JPG',
+	        src: 'static/img/menu/_MG_0570.JPG',
 	        error: 'http://placehold.it/150',
 	        loading: '/static/img/loading.gif'
 		      }

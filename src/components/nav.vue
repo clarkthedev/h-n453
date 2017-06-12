@@ -2,14 +2,14 @@
   <nav class="navbar ">
     <div class="navbar__wrapper">
       <div class="navbar__logo">
-        <router-link to="/" >  <img class="navbar__path" src="/static/img/logo.png" height="70" alt="">
+        <router-link to="/" @click="top">  <img class="navbar__path" src="/static/img/logo.png" height="70" alt="">
         </router-link>
       </div>
       <ul class="navbar__list">
-        <li class="navbar__item" v-for="item in items"> 
+        <li class="navbar__item" @click="top" v-for="item in items"> 
             <router-link :to="item.link">{{item.text}}</router-link>
         </li>
-        <li class="navbar__item"> <router-link to="/menu" class="navbar__link"> Our Menu</router-link> </li>
+        <li class="navbar__item" @click="top"> <router-link to="/menu" class="navbar__link"> Our Menu</router-link> </li>
       </ul>
     </div>
 
@@ -35,6 +35,11 @@ export default {
         },
       ]
      
+    }
+      },
+    methods: {
+      top(){
+        $(window).scrollTop(0);
     }
   }
 }
