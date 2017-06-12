@@ -33,6 +33,7 @@
       <section class="menu wrapper">
       	<div class="menu__images">
       		<div class="menu__img">
+          
       			<img src="/static/img/menu/HainaneseDelights_05092014-265.JPG">
       		</div>
 

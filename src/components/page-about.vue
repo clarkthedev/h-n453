@@ -3,12 +3,12 @@
 	<section class="wrapper" id="about">
 		<h1>ABOUT US</h1>
 		<div class="about-page">
-			<div class="half-width abou">
+			<div class="half-width about">
 				<p>
-			Hainanese Delights had its bright start in 2011 at robinsons galleria when our company broadened culinary horizons by branching out into singaporean cuisine. already an advocate of chinese food since late 2007, we continued our passion for asian flavor by bringing singaporean food to the philippines. While chinese and japanese restaurant already have strong footholds in the filipino, singaporean dishes still remain largely unknown. However, the creation of hainanese delights seeks to change that. The cuisine which centers on singaporean’s national dish hainanese chicken appeals to filipino taste being both savory and affordable. But it allso has the exotic singaporean flavor which adds a different twist to the dishes, yet remain affordable price.
+			Hainanese Delights had its bright start in 2011 at robinsons galleria when our company broadened culinary horizons by branching out into singaporean cuisine. already an advocate of chinese food since late 2007, we continued our passion for asian flavor by bringing singaporean food to the philippines. While chinese and japanese restaurant already have strong footholds in the filipino, singaporean dishes still remain largely unknown. However, the creation of hainanese delights seeks to change that. The cuisine which centers on singaporean’s national dish hainanese chicken appeals to filipino taste being both <span> savory and affordable </span> . But it allso has the exotic singaporean flavor which adds a different twist to the dishes, yet remain affordable price.
 			</p>
 			<p>
-			We have a strong history with asian cuisine, having two successful chinese restaurants under our belt. The first ever restaurant chinoy king, put up in december 2017; thereafter, in september 2008, shainghai cuisine was launched to great results. so, already seasoned restaurateurs, we know the ins and outs of building a thriving restaurant. The experience in putting up food business gives us a working knowledge about creating the best restaurant possible. now we set our sights on advancing singaporean food. Our new venture hainanese delights benefits from that working knowledge. We have crafted the best restaurant possible, with experienced chefs and staff to provide an excellent dining experience to our valued guests. And with a mindset of quality above anything else, and an adventorous spirit, we hope to give filipino clients more hainanese delights. And with a passion for cooking and a wealth of restaurant experience, the results are a restaurant that has top quality in terms of ambiance, service and most especially food.
+			We have a strong history with asian cuisine, having two successful chinese restaurants under our belt. <span> The first ever restaurant chinoy king</span>, put up in december 2017; thereafter, in september 2008, shainghai cuisine was launched to great results. so, already seasoned restaurateurs, we know the ins and outs of building a thriving restaurant. The experience in putting up food business gives us a working knowledge about creating the best restaurant possible. now we set our sights on advancing singaporean food. Our new venture hainanese delights benefits from that working knowledge. We have crafted the best restaurant possible, with experienced chefs and staff to provide an <span> excellent dining experience to our valued guests </span>. And with a mindset of quality above anything else, and an adventorous spirit, we hope to give filipino clients more hainanese delights. And with a passion for cooking and a wealth of restaurant experience, the results are a restaurant that has top quality in terms of ambiance, service and most especially food.
 			</p>
 		</div>
 		<div class="half-width policyWrapper ">
@@ -28,7 +28,6 @@
 				<p>Making utmost effort to provide excellent service and high quality food by continously assessing its validity and making improvement as needed.</p>
 			</div>
 		</div>
-
 	</div>
 	</section>	
 </template>
@@ -67,7 +66,7 @@ h2
 		border-left: 1px solid #CDB649
 		&+.about-page__policy
 			margin-top: 1em
-strong
+span
 	color: #CDB649
 p
 	color: #555

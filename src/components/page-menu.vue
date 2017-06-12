@@ -16,7 +16,8 @@
 				<div class="menuList__item" v-for="n in 9">
 					<div class="menuList__color pr">
 						<div class="menuList__img">
-							<img class="menuList__path" src="/static/img/menu/_MG_0570.JPG">
+							<img class="menuList__path" v-lazy='imgObj'>
+							<div v-lazy:background-image="imgObj"></div>
 						</div>
 						<div class="menuList__details pr">
 							<strong class="menuList__name"> Hainanese Chicken </strong>
@@ -30,7 +31,26 @@
 		</div>
 	</div>
 </template>
+<script>
+	export default{
+		data(){
+			return{
+				 imgObj: {
+	        src: 'http://placehold.it/3500',
+	        error: 'http://placehold.it/150',
+	        loading: '/static/img/loading.gif'
+		      }
+		    }
+			}
+		}
+	
+</script>
+
 <style scoped lang="sass">
+h1
+	font-family: "Roboto Slab",serif
+	font-weight: normal
+	color: #333
 .wrapper
 	padding: 2em 0;
 .menuList
@@ -94,9 +114,5 @@
 				color: #CDB649
 
 </style>
-<script>
-	export default{
 
-	}
-</script>
 

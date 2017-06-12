@@ -17,6 +17,9 @@ font-family: 'Dancing Script', cursive;
 */
 
 @import url('https://fonts.googleapis.com/css?family=Alex+Brush|Julius+Sans+One|Roboto');
+body{
+  padding-top:75px;
+}
 @media screen and (max-width: 1024px){
   .menu__images{
     width: 100% !important;

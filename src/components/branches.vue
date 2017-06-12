@@ -9,9 +9,10 @@
 					<div class="branches__store"> 
 						<div class="branches__result"> 
 							<div class="result__mall"> {{branch.location}} </div>
-							<div class="result__floor"> 4/F, Robinsons Place Manila </div>
-							<div> Midtown Wing, Pedro Gil cor. </div>
-							<div> Adriatico Street, Ermita  </div>
+							<div class="result__floor"> 
+										4/F, Robinsons Place Manila <br>
+										Midtown Wing, Pedro Gil cor.  <br>
+									 Adriatico Street, Ermita  </div>
 						</div>
 					</div>
 				</div>
@@ -54,9 +55,12 @@ export default {
 
 <style scoped lang="sass">
 .result
+	&__floor
+		color: #777
 	&__mall
 		font-weight: 800
 		margin-bottom: .75em
+		color: #444
 .branches
 	background: #f8f8f8
 	width: 100%
@@ -88,6 +92,7 @@ export default {
 		min-width: 30px
 	&__result
 		display: inline-block
+		line-height: 1.6
 
 </style>
 

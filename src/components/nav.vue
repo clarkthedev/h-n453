@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar ">
     <div class="navbar__wrapper">
       <div class="navbar__logo">
         <img class="navbar__path" src="/static/img/logo.png" height="70" alt="">
@@ -43,7 +43,13 @@ export default {
 <style scoped lang="sass">
 $yellow: #CDB649
 .navbar
-  background: #f7f7f7
+  background: #fff
+  position: fixed
+  top: 0
+  left: 0 
+  right: 0
+  z-index: 9
+  border-bottom: 1px solid #ccc
   a
     text-decoration: none
     &:not(.navbar__link)

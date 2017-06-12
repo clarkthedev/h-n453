@@ -23,16 +23,13 @@ export default {
     }
   },
   mounted(){
-      var controller = new ScrollMagic.Controller();
-      var scene = new ScrollMagic.Scene({triggerElement: ".aboutUs__details"})
-            .setPin(".navbar__wrapper")
-            .addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
-            .addTo(controller);
+  
   }
   }
 </script>
 
 <style lang="sass">
+
 .ourMenu
 	content: ""
 	display: table
@@ -178,5 +175,6 @@ export default {
 		img
 			max-width: 100%
 			width: 100%
-
+p
+  line-height: 1.6
 </style>
