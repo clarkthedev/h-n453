@@ -2,7 +2,8 @@
   <nav class="navbar ">
     <div class="navbar__wrapper">
       <div class="navbar__logo">
-        <img class="navbar__path" src="/static/img/logo.png" height="70" alt="">
+        <router-link to="/" >  <img class="navbar__path" src="/static/img/logo.png" height="70" alt="">
+        </router-link>
       </div>
       <ul class="navbar__list">
         <li class="navbar__item" v-for="item in items"> 
@@ -50,6 +51,8 @@ $yellow: #CDB649
   right: 0
   z-index: 9
   border-bottom: 1px solid #ccc
+  img
+    cursor: pointer
   a
     text-decoration: none
     &:not(.navbar__link)
@@ -61,15 +64,28 @@ $yellow: #CDB649
         padding-bottom: 1em
         
   &__wrapper
-    padding: 0 10rem
+    padding: 0 8rem
     width: 100%
-    height: 75px
     display: flex
     color: #444
     font-family: "Julius",sans-serif
     justify-content: space-between
-    flex-wrap: wrap
+    flex-wrap: nowrap
     font-size: .85em
+    @media screen and (max-width: 769px)
+      padding: 0 .5em
+      flex-direction: column
+      justify-content: center
+      align-item: center
+      align-content: center
+      .navbar__logo
+        justify-content: center
+      img
+        height: 55px
+        position: relative
+        top: 1em
+      .navbar__item
+        margin: 0
   &__logo
     display: flex
     align-items: center
@@ -78,6 +94,7 @@ $yellow: #CDB649
   &__list
     display: flex
     justify-content: space-around
+    flex-wrap: nowrap
   &__link
     color: #fff
     padding: .5em 1em

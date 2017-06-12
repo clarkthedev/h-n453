@@ -49,6 +49,12 @@ export default {
   min-height: 200px
   position: relative
   align-items: center
+  &__image
+    @media screen and (max-width: 1280px)
+      width: 100%
+      img
+        display: block
+        margin: 0 auto 1em auto
   @media screen and (max-width: 768px)
     align-items: flex-start !important
     flex-direction: column

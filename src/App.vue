@@ -74,7 +74,7 @@ export default {
   margin: 3em 10em
   padding: 5em 0
   @media screen and (max-width: 769px)
-    padding: 4em 0
+    padding: 4em .15em
     margin: 3em
 .aboutUs
   display: flex

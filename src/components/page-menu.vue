@@ -1,6 +1,5 @@
 <template>
 	<div class="menuList wrapper">
-
 		<div class="menuList__wrapper">
 				<div class="menuList__filter">
 					<h1>Menu</h1>
@@ -16,7 +15,7 @@
 				<div class="menuList__item" v-for="n in 9">
 					<div class="menuList__color pr">
 						<div class="menuList__img">
-							<img class="menuList__path" v-lazy='imgObj'>
+							<img class="menuList__path" v-lazy="'./static/img/menu/_MG_0570.JPG'">
 							<div v-lazy:background-image="imgObj"></div>
 						</div>
 						<div class="menuList__details pr">
@@ -36,7 +35,7 @@
 		data(){
 			return{
 				 imgObj: {
-	        src: 'http://placehold.it/3500',
+	        src: './static/img/menu/_MG_0570.JPG',
 	        error: 'http://placehold.it/150',
 	        loading: '/static/img/loading.gif'
 		      }
@@ -52,38 +51,57 @@ h1
 	font-weight: normal
 	color: #333
 .wrapper
-	padding: 2em 0;
+	padding: 2em 0
+	@media screen and (max-width: 880px)
+		padding: .5em
+		margin: 0
 .menuList
+	@media screen and (max-width: 550px)
+		h1
+			text-align: center
 	ul
 		list-style: none
 	&__wrapper
 		display: flex
 		flex-direction: row
-		flex-wrap: wrap
+		flex-wrap: nowrap
 		justify-content: space-between
+		@media screen and (max-width: 880px)
+			flex-wrap: wrap
 	&__list
 		width: 85%
 		font-size: .85em
+		@media screen and (max-width: 880px)
+			width: 100%
 	&__filter
 		text-align: right
 		padding-right: 1.5em
 		border-right: 1px dashed #ccc
-
+		@media screen and (max-width: 880px)
+			border: 0
+			padding: 0
+			text-align: left !important
 	&__item
 		padding: .35em
 		width: 33.33%
 		display: inline-block
+		@media screen and(max-width: 880px)
+			width: 50%
+		@media screen and(max-width: 426px)
+			width: 100%
 	&__color
 		display: flex
 		padding: 2em 1em
 		background: #f7f7f7
 		border: 1px solid #eee
+		@media screen and (max-width: 1280px)
+			flex-direction: column
 	&__path
 		max-width: 100%
-		height: auto
-		min-width: 150px
-		width: 100px
+		width: 300px
 		padding-right: .55rem
+		@media screen and (max-width: 880px)
+			width: 100%
 	&__description
 		margin: 1em 0 2.5em 0
 		color: #777
@@ -100,13 +118,16 @@ h1
 .filter
 	&__list
 		text-align: right
-
+		@media screen and (max-width: 880px)
+			text-align: center
 		a
 			color: #333
 			text-decoration: none
-
 	&__item
 		padding: .5em
+		@media screen and (max-width: 880px)
+			display: inline-block
+			text-align: left
 		&+.filter__item
 			margin-top: 1em
 		&--is-active

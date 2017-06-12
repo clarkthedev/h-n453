@@ -39,6 +39,9 @@
 <style lang="sass" scoped>
 .wrapper
 	padding: 2em 0
+	@media screen and(max-width: 769px)
+		margin: 6em .15em 0 .15em
+		padding: 0 1em	
 .fa
 	height: 20px
 	width: 20px
@@ -53,7 +56,7 @@ h2
 	flex-direction: column
 	justify-content: space-between
 	margin-left: 5em
-
+	
 h1,
 h2
 	margin-top: 0
@@ -61,6 +64,8 @@ h2
 	font-family: "Roboto", serif
 .about-page
 	display: flex
+	@media screen and (max-width: 1025px)
+		flex-direction: column
 	&__policy
 		padding: 0 1em 1em
 		border-left: 1px solid #CDB649
@@ -73,7 +78,10 @@ p
 .full-width
 	width: 40%
 .half-width
-	width: 50%	
+	width: 50%
+	@media screen and (max-width: 1025px)
+		width: 100%
+		margin: 1em 0
 p+p
 	margin-top: 16px
 </style>

@@ -64,7 +64,9 @@
 
 	    </p>
 	    <div class="menu__btnWrapper">
-	    	<button class="z-depth-1"> VIEW FULL MENU </button>
+	    	<router-link to="/menu" > 
+       <button class="z-depth-1"> VIEW FULL MENU </button>
+        </router-link> 
 	    </div>
     	</div>
       </section>

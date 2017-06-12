@@ -109,11 +109,27 @@ textarea
 	padding-top: 12px
 .wrapper
 	padding: .1em 0
+	@media screen and(max-width: 769px)
+		margin: 6em .15em 0 .15em
+		padding: 0 1em	
 .contactWrapper
 	background: #f3f3f3
 	padding: 3em
 	display: flex
 	justify-content: space-between
+	@media screen and (max-width: 769px)
+		margin-top: 1em
+		padding: .25em
+		position: relative
+		flex-direction: column
+		>form
+			width: 100%
+			padding: 0
+			order: 2
+			margin-top: 2em
+		>iframe
+			width: 100%
+			order: 1
 #gmap_canvas img
 	max-width:none!important
 	background:none!important
