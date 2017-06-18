@@ -10,6 +10,7 @@
 <script>
 import navbar from './components/nav.vue'
 import foot from './components/foot.vue'
+import TweenMax from 'TweenMax';
 
 export default {
   name: 'app',
@@ -23,9 +24,11 @@ export default {
     }
   },
   mounted(){
-  
+
+}
+
   }
-  }
+
 </script>
 
 <style lang="sass">

@@ -12,15 +12,15 @@
 				</ul>
 			</div>
 			<div class="menuList__list">
-				<div class="menuList__item" v-for="n in 9">
+				<div class="menuList__item" v-for="food in menu">
 					<div class="menuList__color pr">
 						<div class="menuList__img">
-							<img class="menuList__path" v-lazy="'static/img/menu/_MG_0570.JPG'">
-							<div v-lazy:background-image="imgObj"></div>
+							<img class="menuList__path" :src="getURL(food.mPath)">
+							<div class="zxc"> </div>
 						</div>
 						<div class="menuList__details pr">
-							<strong class="menuList__name"> Hainanese Chicken </strong>
-							<div class="menuList__description">Lorem ipsum dolor sit amet, consectetur adipisicing epariatur quisquam ut dicta quis, voluptatem s</div>
+							<strong class="menuList__name"> {{food.mName}} </strong>
+							<div class="menuList__description">{{food.mDesc}}</div>
 							<div class="pa menuList__price">P400.00</div>
 							<div class="pa menuList__category">Rice Dishes </div>
 						</div>
@@ -31,18 +31,39 @@
 	</div>
 </template>
 <script>
+import {db} from '../firebase';
+import {sb} from '../firebase';
+import AsyncComputed from 'vue-async-computed'
+
+
+	var x =""
+
 	export default{
+
+	firebase(){
+	return {
+		menu : db.ref('menu')
+	}
+	},
+
+	
 		data(){
-			return{
-				 imgObj: {
-	        src: 'static/img/menu/_MG_0570.JPG',
-	        error: 'http://placehold.it/150',
-	        loading: '/static/img/loading.gif'
-		      }
-		    }
+			return {
+			menu : []
+			}
+
+		},methods: {
+			getURL(imageUri){
+				var starsRef = sb.refFromURL('https://firebasestorage.googleapis.com/v0/b/hainanese-delights.appspot.com/o/'+imageUri);
+				 starsRef.getDownloadURL().then(function(url) {
+				 	return x = url; 
+				}) 
+				return x;
+				 
 			}
 		}
 	
+	}
 </script>
 
 <style scoped lang="sass">

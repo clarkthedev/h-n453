@@ -12,7 +12,8 @@
 							<div class="result__floor"> 
 										4/F, Robinsons Place Manila <br>
 										Midtown Wing, Pedro Gil cor.  <br>
-									 Adriatico Street, Ermita  </div>
+									 Adriatico Street, Ermita  
+							</div>
 						</div>
 					</div>
 				</div>
@@ -22,27 +23,26 @@
 </template>
 
 <script>
-import Firebase from 'firebase'
+// import Firebase from 'firebase'
 
-let config = {
-    apiKey: "AIzaSyDr_FxFCkvHvoOhN6O-pXRbhlKPu0BDWMQ",
-    authDomain: "hainanese-delights.firebaseapp.com",
-    databaseURL: "https://hainanese-delights.firebaseio.com",
-    projectId: "hainanese-delights",
-    storageBucket: "hainanese-delights.appspot.com",
-    messagingSenderId: "102778988316"
-}
-let app = Firebase.initializeApp(config)
-let db = app.database();
-let branchRef = db.ref('branches')
-
-
+// let config = {
+//     apiKey: "AIzaSyDr_FxFCkvHvoOhN6O-pXRbhlKPu0BDWMQ",
+//     authDomain: "hainanese-delights.firebaseapp.com",
+//     databaseURL: "https://hainanese-delights.firebaseio.com",
+//     projectId: "hainanese-delights",
+//     storageBucket: "hainanese-delights.appspot.com",
+//     messagingSenderId: "102778988316"
+// }
+// let app = Firebase.initializeApp(config)
+// let db = app.database();
+// let branchRef = db.ref('branches')
+import {db} from '../firebase';
 
 export default {
 
   name: 'branches',
    firebase: {
-    branches: branchRef
+		branches: db.ref('branches')
   },
   data () {
     return {

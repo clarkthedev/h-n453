@@ -1,8 +1,11 @@
+import './firebase';
 import Vue from 'vue'
 import Vuefire from 'vuefire'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import VueLazyload from 'vue-lazyload'
+import AsyncComputed from 'vue-async-computed'
+
 
 
 // component
@@ -10,6 +13,7 @@ import home from './components/page-home.vue'
 import about from './components/page-about.vue'
 import menu from './components/page-menu.vue'
 import contact from './components/page-contact.vue'
+import form from './components/page-form.vue'
 
 const routes = [
   { path: '/',
@@ -25,8 +29,11 @@ const routes = [
   {
   	path: '/contact',
   	component: contact
+  },
+    {
+    path: '/zxc',
+    component: form
   }
-
 ]
 
 
@@ -38,8 +45,8 @@ const router = new VueRouter({
 })
 
 
-
 Vue.use(VueRouter)
+Vue.use(AsyncComputed)
 Vue.use(Vuefire)
 Vue.use(VueLazyload)
 
