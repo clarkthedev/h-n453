@@ -4,7 +4,6 @@ import Vuefire from 'vuefire'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import VueLazyload from 'vue-lazyload'
-import AsyncComputed from 'vue-async-computed'
 
 
 
@@ -46,7 +45,6 @@ const router = new VueRouter({
 
 
 Vue.use(VueRouter)
-Vue.use(AsyncComputed)
 Vue.use(Vuefire)
 Vue.use(VueLazyload)
 

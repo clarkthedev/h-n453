@@ -15,7 +15,7 @@
 				<div class="menuList__item" v-for="food in menu">
 					<div class="menuList__color pr">
 						<div class="menuList__img">
-							<img class="menuList__path" :src="getURL(food.mPath)">
+							<img class="menuList__path" :src="food.imgURL">
 							<div class="zxc"> </div>
 						</div>
 						<div class="menuList__details pr">
@@ -33,17 +33,33 @@
 <script>
 import {db} from '../firebase';
 import {sb} from '../firebase';
-import AsyncComputed from 'vue-async-computed'
 
 
 	var x =""
 
 	export default{
 
-	firebase(){
-	return {
-		menu : db.ref('menu')
-	}
+	// firebase(){
+	// return {
+	// 	menu : db.ref('menu')
+	// }
+	firebase () {
+  return {
+    menu: {
+      asObject: false,
+      source: db.ref('menu'),
+      readyCallback () {
+        Promise.all(this.menu.map(
+          food => sb.refFromURL('https://firebasestorage.googleapis.com/v0/b/hainanese-delights.appspot.com/o/'+food.mPath).getDownloadURL()
+        )).then(urls => {
+          this.menu = this.menu.map((food, index) => {
+            food.imgURL = urls[index]
+            return food
+          })
+        })
+      }
+    }
+  }
 	},
 
 	
@@ -53,14 +69,6 @@ import AsyncComputed from 'vue-async-computed'
 			}
 
 		},methods: {
-			getURL(imageUri){
-				var starsRef = sb.refFromURL('https://firebasestorage.googleapis.com/v0/b/hainanese-delights.appspot.com/o/'+imageUri);
-				 starsRef.getDownloadURL().then(function(url) {
-				 	return x = url; 
-				}) 
-				return x;
-				 
-			}
 		}
 	
 	}
